@@ -1,0 +1,75 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffaabb;
+  margin: 0;
+  padding: 0;
+  color: #e014da;
+}
+
+header {
+  background: #ffaabb;
+  color: rgb(82, 143, 184);
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.contenedor {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.control-panel {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.valor-fuerza {
+  margin-top: 5px;
+  font-size: 1.1em;
+  color: #8db0cf;
+}
+
+.simulador-area {
+  background: #9cf0cb;
+  border: 2px solid #d704db;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.resultados {
+  background: #f29df5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.resultados p {
+  font-size: 1.1em;
+  margin: 8px 0;
+}
+
+.grafico {
+  background: #7cdade;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #d118c5;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #80a9ef;
+  background: #e6667f;
+}

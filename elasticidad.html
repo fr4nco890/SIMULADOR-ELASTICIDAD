@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador de Barra Elástica 2D</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🧪 Simulador Profesional de Elasticidad</h1>
+    <p>Visualiza cómo una barra se deforma con la fuerza aplicada</p>
+  </header>
+
+  <main class="contenedor">
+    <section class="control-panel">
+      <label for="fuerza">Fuerza aplicada (N):</label>
+      <input type="range" id="fuerza" min="0" max="1000" value="200" step="10" oninput="actualizarFuerza(this.value)">
+      <div class="valor-fuerza"><span id="valorFuerza">200</span> N</div>
+    </section>
+
+    <section class="simulador-area">
+      <canvas id="canvasSimulador" width="600" height="200"></canvas>
+    </section>
+
+    <section class="resultados">
+      <h2>📊 Resultados:</h2>
+      <p><strong>Deformación:</strong> <span id="deformacion">0.00</span> m</p>
+      <p><strong>Esfuerzo:</strong> <span id="esfuerzo">0.00</span> MPa</p>
+      <p><strong>Energía elástica:</strong> <span id="energia">0.00</span> J</p>
+    </section>
+
+    <section class="grafico">
+      <canvas id="graficoChart"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    Proyecto Física II
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <!-- Chart.js se agregará después -->
+</body>
+</html>

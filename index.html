@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Animación Simulador Elasticidad</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 30px;
+      font-family: 'Arial Black', sans-serif;
+    }
+
+    .texto {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .letra {
+      font-size: 5rem;
+      color: #060606;
+      animation: iluminar 1s infinite;
+    }
+
+    @keyframes iluminar {
+      0% {
+        color: #0d0d0d;
+        text-shadow: none;
+      }
+      50% {
+        color: #fff;
+        text-shadow: 0 0 20px #a53535, 0 0 40px rgb(140, 225, 225);
+      }
+      100% {
+        color: #c17272;
+        text-shadow: none;
+      }
+    }
+
+    .boton {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: white;
+      background-color: rgb(221, 40, 203);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .boton:hover {
+      background-color: #e03ebd;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="texto" id="textoAnimado">
+    <!-- Las letras se insertan con JS -->
+  </div>
+
+  <button class="boton" onclick="window.location.href='elasticidad.html'">
+    IR AL SIMULADOR  
+  </button>
+
+  <script>
+    const texto = "SIMULADOR-ELASTICIDAD :)";
+    const contenedor = document.getElementById("textoAnimado");
+
+    [...texto].forEach((char, index) => {
+      const span = document.createElement("span");
+      span.className = "letra";
+      span.textContent = char;
+      span.style.animationDelay = `${index * 0.2}s`;
+      contenedor.appendChild(span);
+    });
+  </script>
+</body>
+</html>
